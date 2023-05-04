@@ -3,25 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+    -webkit-tap-highlight-color: transparent;
+    --highlight: #FE6313;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.sphe-editing {
+    background-image: url('./images/Sphe\ Editing.png');
+    background-color: #000000;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center; /* Add this line to center the background image */
+    transition: background-size 0.3s ease-in-out; /* Add this line for smooth scaling */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.sphe-portfolio {
+    background-image: url('./images/Sphe\ Portfolio.png');
+    background-color: #161616;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center; /* Add this line to center the background image */
+    transition: background-size 0.3s ease-in-out; /* Add this line for smooth scaling */
+}
+
+.sphe-editing:hover {
+    background-size: 95%;
+}
+
+.sphe-portfolio:hover {
+    background-size: 95%;
+}
+
+.mask {
+    -webkit-mask-image: linear-gradient( white 50%, white 50%);
+    mask-image: linear-gradient(to bottom, transparent, white 50%, white 50%, transparent);
 }
