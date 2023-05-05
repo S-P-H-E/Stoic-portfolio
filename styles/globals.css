@@ -34,6 +34,6 @@
 }
 
 .mask {
-    -webkit-mask-image: linear-gradient( transparent 50%, transparent 50%);
-    mask-image: linear-gradient(to bottom, transparent, white 50%, white 50%, transparent);
+  -webkit-mask-image: linear-gradient( white 50%, white 50%);
+  mask-image: linear-gradient(white 50%, white 50%);
 }
