@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <Head>
         <title>S T O I C</title>
-        <meta name="description" content="Sphe Editig Home Page" />
+        <meta name="description" content="Stoic portfolio page" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
@@ -71,7 +71,7 @@ export default function Home() {
       {/* Home */}
       <animated.div style={homeAnimation} id="home" className="bg-[#131315] mb-5 mx-7 rounded-3xl flex flex-col justify-center items-center md:p-5">
         <div className="p-16 text-center flex flex-col justify-center items-center">
-        <h1 className="text-white text-4xl md:text-6xl font-bold">Brand growth through <br/> Web Development.</h1>
+        <h1 className="text-white text-3xl md:text-6xl font-bold text-start">Brand growth through <br/> Web Development.</h1>
           <p className="text-[#54545D] m-3">Crafting beautiful and responsive websites, tailored to your
             business needs.<br /> Specializing in modern web technologies to help
             bring your ideas to life.</p>
