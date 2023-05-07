@@ -1,7 +1,10 @@
 import Head from 'next/head'
+import Image from 'next/image';
 import { AiFillFire } from 'react-icons/ai'
 import { BsArrowRightShort } from "react-icons/bs"
 import { useSpring, animated, config } from 'react-spring';
+import Profile from '@/styles/images/Profile.png'
+import ContactForm from '@/components/ContactForm';
 
 export default function Home() {
   function getYOffset(element) {
@@ -70,12 +73,13 @@ export default function Home() {
 
       {/* Home */}
       <animated.div style={homeAnimation} id="home" className="bg-[#131315] mb-5 mx-7 rounded-3xl flex flex-col justify-center items-center md:p-5">
-        <div className="p-16 text-center flex flex-col justify-center items-center">
-        <h1 className="text-white text-3xl md:text-6xl font-bold text-start">Brand growth through <br/> Web Development.</h1>
+        <Image src={Profile} width={300}/>
+        <div className="pb-16 text-center flex flex-col justify-center items-center">
+        <h1 className="text-white text-3xl md:text-6xl font-bold">Brand growth through <br/> Web Development.</h1>
           <p className="text-[#54545D] m-3">Crafting beautiful and responsive websites, tailored to your
             business needs.<br /> Specializing in modern web technologies to help
             bring your ideas to life.</p>
-          <button className="text-white bg-[var(--highlight)] w-fit py-3 m-4 rounded-full flex justify-center items-center gap-3 px-5 transition-all hover:scale-110" onClick={() => window.location.href = 'mailto:sphe.g.personal@gmail.com'}>
+          <button className="text-white bg-[var(--highlight)] w-fit py-3 m-4 rounded-full flex justify-center items-center gap-3 px-5 transition-all hover:scale-110" onClick={() => window.scrollTo({ top: getYOffset(document.getElementById('contact')), behavior: 'smooth' })}>
             Contact Me
             <BsArrowRightShort className="text-[var(--highlight)] bg-white rounded-full" size={25}/>
           </button>
@@ -99,13 +103,14 @@ export default function Home() {
       </animated.div>
 
         {/* Contact */}
-        <animated.div style={contactAnimation} id="contact" className="bg-[#131315] mb-5 mx-7 rounded-3xl flex flex-col justify-center items-center p-20">
-          <h1 className="text-white text-4xl md:text-6xl font-bold">Have a cool project?</h1>
-          <p className="text-[#54545D] m-3">Feel free to reach out for collaborations or just a friendly hello</p>
+        <animated.div style={contactAnimation} id="contact" className="bg-[#131315] mb-5 mx-7 rounded-3xl flex flex-col justify-center items-center p-9 md:p-20">
+          <h1 className="text-white text-4xl md:text-6xl font-bold text-center">Have a cool project?</h1>
+          <p className="text-[#54545D] m-3 text-center">Feel free to reach out for collaborations or just a friendly hello</p>
           <button className="text-white bg-[var(--highlight)] w-fit py-3 mt-4 rounded-full flex justify-center items-center gap-3 px-5 transition-all hover:scale-110" onClick={() => window.location.href = 'mailto:sphe.g.personal@gmail.com'}>
             Contact Me
             <BsArrowRightShort className="text-[var(--highlight)] bg-white rounded-full" size={25}/>
           </button>
+          {/* <ContactForm /> */}
         </animated.div>
     </>  )
 }
